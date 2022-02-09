@@ -1,17 +1,20 @@
 import React from 'react';
+import './App.test';
+import './App.css';
 import { useState } from 'react';
+import { render } from '@testing-library/react';
 
 
-const App = () => {
+function App() {
   const [count, setCount] = useState(0);
-  console.log('')
   const name = 'yokiko';
 
-  const countUp = () => {
+  const imcrement = () => {
     setCount(count + 1);
   };
+  console.log("count")
 
-  const countDown = () => {
+  const decrement = () => {
     setCount(count - 1);
   };
 
@@ -36,8 +39,8 @@ const App = () => {
     </div>
 
     <div>
-      <button onClick={countUp}>+</button>
-      <button onClick={countDown}>-</button>
+      <button onClick={imcrement}>+</button>
+      <button onClick={decrement}>-</button>
     </div>
     <div>
       <button onClick={countReset}>RESET</button>
